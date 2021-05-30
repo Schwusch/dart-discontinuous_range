@@ -43,7 +43,8 @@ class SubRange {
   String toString() => low == high ? '$low' : '$low-$high';
 
   @override
-  bool operator ==(Object other) => other is SubRange && other.low == low && other.high == high;
+  bool operator ==(Object other) =>
+      other is SubRange && other.low == low && other.high == high;
 
   @override
   int get hashCode => low.hashCode ^ high.hashCode;
@@ -140,13 +141,13 @@ class DRange {
   DRange clone() => DRange.fromDRange(this);
 
   List<int> numbers() => _ranges.fold([], (result, subrange) {
-    var i = subrange.low;
-    while (i <= subrange.high) {
-      result.add(i);
-      i++;
-    }
-    return result;
-  });
+        var i = subrange.low;
+        while (i <= subrange.high) {
+          result.add(i);
+          i++;
+        }
+        return result;
+      });
 
   List<SubRange> get subranges => [..._ranges];
 }

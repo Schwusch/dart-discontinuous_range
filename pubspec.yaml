@@ -1,6 +1,6 @@
 name: discontinuous_range
 description: For adding/subtracting sets of range of numbers, e.g. [ 1-3, 7-10 ]
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Schwusch/dart-discontinuous_range
 
 environment:
